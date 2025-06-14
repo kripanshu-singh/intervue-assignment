@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Technical interview resources from Intervue.io"
+    />
+    <link rel="icon" href="./assets/intervue_io_logo.png" />
+    <title>Intervue.io – Technical Interview Resources</title>
+
+    <!-- Sora Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Tailwind via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                50: "#f0f9ff",
+                100: "#e0f2fe",
+                500: "#3b82f6",
+                600: "#2563eb",
+              },
+              dark: {
+                900: "#111827",
+                800: "#1f2937",
+              },
+            },
+            fontFamily: {
+              sans: ["Sora", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="bg-white text-gray-800 font-sans antialiased">
+    <!-- NAVBAR -->
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-sm shadow-sm">
+      <div
+        class="container mx-auto px-6 py-4 flex items-center justify-between"
+      >
+        <img src="./assets/intervue-company.png" class="w-32" alt="" />
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex space-x-8">
+          <a
+            href="#features"
+            class="group font-medium hover:text-primary-600 transition-colors inline-flex items-center space-x-1"
+          >
+            <span>Become an Interviewer</span>
+            <svg
+              class="w-4 h-4 transform transition-transform duration-500 group-hover:rotate-45"
+              viewBox="0 0 1024 1024"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+            >
+              <path
+                d="M768 256H353.6a32 32 0 1 1 0-64H800a32 32 0 0 1 32 32v448a32 32 0 0 1-64 0V256z"
+              ></path>
+              <path
+                d="M777.344 201.344a32 32 0 0 1 45.312 45.312l-544 544a32 32 0 0 1-45.312-45.312l544-544z"
+              ></path>
+            </svg>
+          </a>
+          <a
+            href="#resources"
+            class="font-medium hover:text-primary-600 transition-colors"
+            >Pricing</a
+          >
+          <a
+            href="#security"
+            class="font-medium hover:text-primary-600 transition-colors"
+            >Start a free trial</a
+          >
+          <a
+            href="#faq"
+            class="font-medium hover:text-primary-600 transition-colors"
+            >FAQ</a
+          >
+        </nav>
+
+        <div class="flex items-center space-x-4">
+          <button
+            class="hidden md:inline-flex items-center px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors font-medium"
+          >
+            Login
+          </button>
+          <button
+            class="hidden md:inline-flex items-center px-4 py-2 bg-dark-900 text-white rounded-lg hover:bg-dark-800 transition-colors font-medium shadow-sm"
+          >
+            Sign up
+            <i class="fas fa-arrow-right ml-2 text-sm"></i>
+          </button>
+        </div>
+
+        <!-- Mobile menu button -->
+        <button
+          id="mobile-menu-button"
+          class="md:hidden p-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-primary-500"
+        >
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- HERO / SEARCH -->
+    <section class="relative overflow-hidden pt-16 pb-20">
+      <div class="absolute inset-0 -z-10">
+        <div
+          class="absolute inset-0 bg-gradient-to-b from-primary-50 to-[#f9fafb]"
+        ></div>
+        <div
+          class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-r from-transparent to-white opacity-30"
+        ></div>
+      </div>
+
+      <div class="container mx-auto px-6 text-center animate-fade-in">
+        <h1
+          class="text-4xl md:text-5xl font-bold mb-6 max-w-3xl mx-auto leading-tight"
+        >
+          Technical Interview <span class="gradient-text">Resources</span>
+        </h1>
+        <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+          Find all the technical interview resources here
+        </p>
+
+        <div class="max-w-xl mx-auto relative">
+          <input
+            type="text"
+            placeholder="Search for resources..."
+            class="w-full border border-gray-300 rounded-full px-6 py-4 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent shadow-sm hover:shadow-md transition-shadow"
+            aria-label="Search resources"
+          />
+          <button
+            class="absolute right-3 top-1/2 transform -translate-y-1/2 bg-primary-500 text-white p-2 rounded-full hover:bg-primary-600 transition-colors"
+          >
+            <i class="fas fa-search w-12"></i>
+          </button>
+        </div>
+
+        <div class="mt-8 flex flex-wrap justify-center gap-4">
+          <span
+            class="px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-medium shadow-sm hover:bg-gray-50 transition-colors"
+          >
+            <i class="fas fa-laptop-code mr-2 text-primary-500"></i>
+            Frontend
+          </span>
+          <span
+            class="px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-medium shadow-sm hover:bg-gray-50 transition-colors"
+          >
+            <i class="fas fa-database mr-2 text-primary-500"></i>
+            Backend
+          </span>
+          <span
+            class="px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-medium shadow-sm hover:bg-gray-50 transition-colors"
+          >
+            <i class="fas fa-project-diagram mr-2 text-primary-500"></i>
+            System Design
+          </span>
+          <span
+            class="px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-medium shadow-sm hover:bg-gray-50 transition-colors"
+          >
+            <i class="fas fa-code mr-2 text-primary-500"></i>
+            Algorithms
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESOURCES GRID -->
+    <section id="resources" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold mb-4">Popular Resources</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Curated collection of the most helpful resources for technical
+            interviews
+          </p>
+        </div>
+
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Resource Card 1 -->
+          <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+            <div class="p-6">
+              <div class="flex justify-between items-start">
+                <span
+                  class="px-3 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800"
+                  >Easy</span
+                >
+                <button
+                  class="text-gray-400 hover:text-primary-500 transition-colors"
+                >
+                  <span
+                    class="text-xs font-medium text-gray-500 uppercase tracking-wider hover:text-primary-500"
+                    >System Design</span
+                  >
+                </button>
+              </div>
+              <h3 class="mt-4 text-xl font-semibold">
+                Design a Food Delivery App
+              </h3>
+              <p class="mt-3 text-gray-600">
+                Comprehensive guide covering UI/UX principles, API design, and
+                database schema for food delivery apps.
+              </p>
+              <div class="mt-6 flex items-center justify-between">
+                <button
+                  class="text-primary-500 hover:text-primary-600 font-medium text-sm flex items-center"
+                >
+                  View Resource
+                  <i class="fas fa-chevron-right ml-1 text-xs"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Resource Card 2 -->
+          <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+            <div class="p-6">
+              <div class="flex justify-between items-start">
+                <span
+                  class="px-3 py-1 text-xs font-semibold rounded-full bg-yellow-100 text-yellow-800"
+                  >Medium</span
+                >
+                <button
+                  class="text-gray-400 hover:text-primary-500 transition-colors"
+                >
+                  <span
+                    class="text-xs font-medium text-gray-500 uppercase tracking-wider hover:text-primary-500"
+                    >Algorithms</span
+                  >
+                </button>
+              </div>
+              <h3 class="mt-4 text-xl font-semibold">
+                Binary Tree Traversal Patterns
+              </h3>
+              <p class="mt-3 text-gray-600">
+                Master in-order, pre-order, and post-order traversals with
+                practical examples and common interview questions.
+              </p>
+              <div class="mt-6 flex items-center justify-between">
+                <button
+                  class="text-primary-500 hover:text-primary-600 font-medium text-sm flex items-center"
+                >
+                  View Resource
+                  <i class="fas fa-chevron-right ml-1 text-xs"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Resource Card 3 -->
+          <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+            <div class="p-6">
+              <div class="flex justify-between items-start">
+                <span
+                  class="px-3 py-1 text-xs font-semibold rounded-full bg-red-100 text-red-800"
+                  >Hard</span
+                >
+                <button
+                  class="text-gray-400 hover:text-primary-500 transition-colors"
+                >
+                  <span
+                    class="text-xs font-medium text-gray-500 uppercase tracking-wider hover:text-primary-500"
+                    >System Design</span
+                  >
+                </button>
+              </div>
+              <h3 class="mt-4 text-xl font-semibold">
+                Distributed Caching Strategies
+              </h3>
+              <p class="mt-3 text-gray-600">
+                Learn about cache invalidation, consistency models, and scaling
+                patterns for distributed systems.
+              </p>
+              <div class="mt-6 flex items-center justify-between">
+                <button
+                  class="text-primary-500 hover:text-primary-600 font-medium text-sm flex items-center"
+                >
+                  View Resource
+                  <i class="fas fa-chevron-right ml-1 text-xs"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Resource Card 4 -->
+          <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+            <div class="p-6">
+              <div class="flex justify-between items-start">
+                <span
+                  class="px-3 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800 hover:text-primary-500"
+                  >Easy</span
+                >
+                <button
+                  class="text-gray-400 hover:text-primary-500 transition-colors"
+                >
+                  <span
+                    class="text-xs font-medium text-gray-500 uppercase tracking-wider"
+                    >Frontend</span
+                  >
+                </button>
+              </div>
+              <h3 class="mt-4 text-xl font-semibold">React Hooks Deep Dive</h3>
+              <p class="mt-3 text-gray-600">
+                Comprehensive guide to React Hooks with practical examples and
+                common pitfalls to avoid.
+              </p>
+              <div class="mt-6 flex items-center justify-between">
+                <button
+                  class="text-primary-500 hover:text-primary-600 font-medium text-sm flex items-center"
+                >
+                  View Resource
+                  <i class="fas fa-chevron-right ml-1 text-xs"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Resource Card 5 -->
+          <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+            <div class="p-6">
+              <div class="flex justify-between items-start">
+                <span
+                  class="px-3 py-1 text-xs font-semibold rounded-full bg-yellow-100 text-yellow-800"
+                  >Medium</span
+                >
+                <button
+                  class="text-gray-400 hover:text-primary-500 transition-colors"
+                >
+                  <span
+                    class="text-xs font-medium text-gray-500 uppercase tracking-wider hover:text-primary-500"
+                    >Backend</span
+                  >
+                </button>
+              </div>
+              <h3 class="mt-4 text-xl font-semibold">REST vs GraphQL</h3>
+              <p class="mt-3 text-gray-600">
+                When to use each, performance considerations, and migration
+                strategies between the two approaches.
+              </p>
+              <div class="mt-6 flex items-center justify-between">
+                <button
+                  class="text-primary-500 hover:text-primary-600 font-medium text-sm flex items-center"
+                >
+                  View Resource
+                  <i class="fas fa-chevron-right ml-1 text-xs"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Resource Card 6 -->
+          <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+            <div class="p-6">
+              <div class="flex justify-between items-start">
+                <span
+                  class="px-3 py-1 text-xs font-semibold rounded-full bg-purple-100 text-purple-800"
+                  >New</span
+                >
+                <button
+                  class="text-gray-400 hover:text-primary-500 transition-colors"
+                >
+                  <span
+                    class="text-xs font-medium text-gray-500 uppercase tracking-wider hover:text-primary-500"
+                    >Soft Skills</span
+                  >
+                </button>
+              </div>
+              <h3 class="mt-4 text-xl font-semibold">
+                Behavioral Questions Guide
+              </h3>
+              <p class="mt-3 text-gray-600">
+                STAR method explained with 50+ common behavioral questions and
+                how to structure your answers.
+              </p>
+              <div class="mt-6 flex items-center justify-between">
+                <button
+                  class="text-primary-500 hover:text-primary-600 font-medium text-sm flex items-center"
+                >
+                  View Resource
+                  <i class="fas fa-chevron-right ml-1 text-xs"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Resource Card 7 -->
+          <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+            <div class="p-6">
+              <div class="flex justify-between items-start">
+                <span
+                  class="px-3 py-1 text-xs font-semibold rounded-full bg-red-100 text-red-800"
+                  >Hard</span
+                >
+                <button
+                  class="text-gray-400 hover:text-primary-500 transition-colors"
+                >
+                  <span
+                    class="text-xs font-medium text-gray-500 uppercase tracking-wider hover:text-primary-500"
+                    >Databases</span
+                  >
+                </button>
+              </div>
+              <h3 class="mt-4 text-xl font-semibold">
+                Design a Scalable Database
+              </h3>
+              <p class="mt-3 text-gray-600">
+                Learn schema design principles, indexing strategies, and
+                normalization vs denormalization tradeoffs.
+              </p>
+              <div class="mt-6 flex items-center justify-between">
+                <button
+                  class="text-primary-500 hover:text-primary-600 font-medium text-sm flex items-center"
+                >
+                  View Resource
+                  <i class="fas fa-chevron-right ml-1 text-xs"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Resource Card 8 -->
+          <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+            <div class="p-6">
+              <div class="flex justify-between items-start">
+                <span
+                  class="px-3 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800"
+                  >Easy</span
+                >
+                <button
+                  class="text-gray-400 hover:text-primary-500 transition-colors"
+                >
+                  <span
+                    class="text-xs font-medium text-gray-500 uppercase tracking-wider hover:text-primary-500"
+                    >Problem Solving</span
+                  >
+                </button>
+              </div>
+              <h3 class="mt-4 text-xl font-semibold">
+                Top 10 Sliding Window Problems
+              </h3>
+              <p class="mt-3 text-gray-600">
+                Build your confidence with common sliding window patterns used
+                in FAANG interviews.
+              </p>
+              <div class="mt-6 flex items-center justify-between">
+                <button
+                  class="text-primary-500 hover:text-primary-600 font-medium text-sm flex items-center"
+                >
+                  View Resource
+                  <i class="fas fa-chevron-right ml-1 text-xs"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Resource Card 9 -->
+          <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+            <div class="p-6">
+              <div class="flex justify-between items-start">
+                <span
+                  class="px-3 py-1 text-xs font-semibold rounded-full bg-yellow-100 text-yellow-800"
+                  >Medium</span
+                >
+                <button
+                  class="text-gray-400 hover:text-primary-500 transition-colors"
+                >
+                  <span
+                    class="text-xs font-medium text-gray-500 uppercase tracking-wider hover:text-primary-500"
+                    >DevOps</span
+                  >
+                </button>
+              </div>
+              <h3 class="mt-4 text-xl font-semibold">CI/CD for Beginners</h3>
+              <p class="mt-3 text-gray-600">
+                Learn the fundamentals of continuous integration and deployment
+                using GitHub Actions and Docker.
+              </p>
+              <div class="mt-6 flex items-center justify-between">
+                <button
+                  class="text-primary-500 hover:text-primary-600 font-medium text-sm flex items-center"
+                >
+                  View Resource
+                  <i class="fas fa-chevron-right ml-1 text-xs"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-12 text-center">
+          <button
+            class="px-6 py-3 bg-white border border-gray-300 rounded-lg shadow-sm hover:bg-gray-50 transition-colors font-medium flex items-center mx-auto"
+          >
+            View All Resources
+            <i class="fas fa-arrow-right ml-2"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECURITY FEATURES -->
+    <section id="security" class="py-16 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold mb-4">Security is our top priority</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Intervue serves startups to fortune 500 companies with enterprise
+            grade security baked in by design
+          </p>
+        </div>
+
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <!-- Security Feature 1 -->
+          <div
+            class="bg-gray-50 p-8 rounded-xl text-center hover:shadow-md transition-shadow"
+          >
+            <div
+              class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <i class="fa-solid fa-key text-2xl text-primary-600"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">End-to-End Encryption</h3>
+            <p class="text-gray-600">
+              Protecting your data at every layer is fundamental to how Intervue
+              works
+            </p>
+          </div>
+
+          <!-- Security Feature 2 -->
+          <div
+            class="bg-gray-50 p-8 rounded-xl text-center hover:shadow-md transition-shadow"
+          >
+            <div
+              class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <i class="fa-solid fa-layer-group text-2xl text-green-600"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Compliances</h3>
+            <p class="text-gray-600">
+              Enterprise grade compliance commitments where we have established
+              controls to adhere to those commitments
+            </p>
+          </div>
+
+          <!-- Security Feature 3 -->
+          <div
+            class="bg-gray-50 p-8 rounded-xl text-center hover:shadow-md transition-shadow"
+          >
+            <div
+              class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <i class="fa-solid fa-rocket text-2xl text-blue-600"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Intervue for Startups</h3>
+            <p class="text-gray-600">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur
+              possimus perferendis in velit nihil ut.
+            </p>
+          </div>
+
+          <!-- Security Feature 4 -->
+          <div
+            class="bg-gray-50 p-8 rounded-xl text-center hover:shadow-md transition-shadow"
+          >
+            <div
+              class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <i class="fa-solid fa-globe text-2xl text-purple-600"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Intervue for Enterprises</h3>
+            <p class="text-gray-600">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur
+              possimus perferendis in velit nihil ut.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIAL -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div
+          class="bg-white rounded-xl shadow-md overflow-hidden max-w-4xl mx-auto"
+        >
+          <div class="md:flex">
+            <div
+              class="md:w-1/3 bg-gradient-to-br from-primary-500 to-blue-600 flex items-center justify-center p-8"
+            >
+              <div class="text-center">
+                <div
+                  class="relative w-52 h-52 rounded-full border-2 border-white overflow-hidden mx-auto mb-6 shadow-lg group cursor-pointer"
+                  id="video-thumbnail"
+                >
+                  <img
+                    src="./assets/thumbnail.png"
+                    alt="Niket Gupta"
+                    class="w-full h-full object-cover"
+                  />
+                  <div
+                    class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity"
+                  >
+                    <svg
+                      class="w-12 h-12 text-white"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <circle cx="12" cy="12" r="12" fill="rgba(0,0,0,0.4)" />
+                      <polygon points="10,8 16,12 10,16" fill="white" />
+                    </svg>
+                  </div>
+                  <span
+                    class="absolute inset-0 flex items-center justify-center"
+                  >
+                    <svg
+                      class="w-12 h-12 text-white opacity-90 pointer-events-none"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                      style="filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.2))"
+                    >
+                      <circle cx="12" cy="12" r="12" fill="rgba(0,0,0,0.3)" />
+                      <polygon points="10,8 16,12 10,16" fill="white" />
+                    </svg>
+                  </span>
+                </div>
+                <h4 class="text-white font-bold text-xl">Niket Gupta</h4>
+                <p class="text-blue-100">Head of Acquisition, Yubi</p>
+              </div>
+            </div>
+            <div class="md:w-2/3 p-8 md:p-12 flex items-center">
+              <div>
+                <i class="fas fa-quote-left text-3xl text-gray-300 mb-4"></i>
+                <p class="text-xl italic mb-6 text-gray-700">
+                  "After interviewing candidates on Intervue, we were able to
+                  convert at least 5% more applicants into hires while reducing
+                  our time-to-hire by 30%. The platform's technical resources
+                  and structured interview process helped us standardize
+                  evaluations across teams."
+                </p>
+                <div class="flex items-center"></div>
+                <div class="flex space-x-2 mt-1">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJ5c9NCR4zpOINe_zHMpz__3bNt1mi8MVvHA&s"
+                    alt="Yubi"
+                    class="h-8 mr-4 opacity-80"
+                  />
+
+                  <div class="border-l border-gray-300 pl-4"></div>
+                  <p class="text-sm font-medium text-gray-500">Featured in</p>
+                  <a
+                    href="https://in.linkedin.com/company/go-yubi"
+                    class="fab fa-linkedin text-blue-600"
+                  ></a>
+                  <a
+                    href="https://www.youtube.com/channel/UCoF5QLz3NROINGmiGItuisw"
+                    class="fab fa-youtube text-red-600"
+                  ></a>
+                  <a
+                    href="https://www.go-yubi.com/"
+                    class="fa-solid fa-globe text-red-600"
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video Popup Modal -->
+      <div
+        id="video-modal"
+        class="fixed inset-0 z-50 flex items-center justify-center bg-black/70 hidden"
+      >
+        <div
+          class="relative bg-transparent max-w-xl w-full mx-4 rounded-lg shadow-lg"
+        >
+          <button
+            id="close-video-modal"
+            class="absolute -top-6 -right-6 text-white text-3xl focus:outline-none hover:text-primary-500 z-10"
+          >
+            &times;
+          </button>
+          <video
+            id="testimonial-video"
+            class="w-full rounded-lg"
+            controls
+            autoplay
+          >
+            <source
+              src="https://dersyb7nfifdf.cloudfront.net/public/assets/videos/Yubi-Niket.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPLORE MORE PRODUCTS -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold mb-4">
+            Explore more products on intervue
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Discover our suite of tools designed to streamline your technical
+            hiring process
+          </p>
+        </div>
+
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Product 1 -->
+          <div
+            class="bg-gradient-to-br from-blue-50 to-white rounded-xl shadow-sm overflow-hidden card-hover"
+          >
+            <div class="p-8">
+              <div
+                class="bg-blue-100 rounded-lg flex items-center justify-center mb-6"
+              >
+                <!-- <i class="fas fa-users text-2xl text-blue-600"></i> -->
+                <img
+                  src="https://uploads-ssl.webflow.com/608e9cc36cbcc089f0998643/64c6135016fce3dec26c8c4b_technical-interviews.png"
+                  alt=""
+                />
+              </div>
+              <h3 class="text-xl font-semibold mb-3">On-Demand Interviews</h3>
+              <p class="text-gray-600 mb-6">
+                Save 90% of engineering & recruitment bandwidth, outsource
+                candidate interviews to us
+              </p>
+              <a
+                href="#"
+                class="text-primary-600 font-medium inline-flex items-center"
+              >
+                Learn more
+                <i class="fas fa-arrow-right ml-2 text-sm"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div
+            class="bg-gradient-to-br from-green-50 to-white rounded-xl shadow-sm overflow-hidden card-hover"
+          >
+            <div class="p-8">
+              <div
+                class="bg-green-100 rounded-lg flex items-center justify-center mb-6"
+              >
+                <!-- <i class="fas fa-chart-line text-2xl text-green-600"></i> -->
+                <img
+                  src="https://uploads-ssl.webflow.com/608e9cc36cbcc089f0998643/64c61350bf2156a87d68512b_programming.png
+              "
+                  alt=""
+                />
+              </div>
+              <h3 class="text-xl font-semibold mb-3">Live interviews</h3>
+              <p class="text-gray-600 mb-6">
+                Assess candidates in real-time with our live coding environment
+                & integrated video calls
+              </p>
+              <a
+                href="#"
+                class="text-primary-600 font-medium inline-flex items-center"
+              >
+                Learn more
+                <i class="fas fa-arrow-right ml-2 text-sm"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div
+            class="bg-gradient-to-br from-purple-50 to-white rounded-xl shadow-sm overflow-hidden card-hover"
+          >
+            <div class="p-8">
+              <div
+                class="bg-purple-100 rounded-lg flex items-center justify-center mb-6"
+              >
+                <!-- <i class="fas fa-code-branch text-2xl text-purple-600"></i> -->
+                <img
+                  src="https://uploads-ssl.webflow.com/608e9cc36cbcc089f0998643/64c616d53601adf691d597e4_detailed-report.png
+              "
+                  alt=""
+                />
+              </div>
+              <h3 class="text-xl font-semibold mb-3">Assessments</h3>
+              <p class="text-gray-600 mb-6">
+                Share assessments across batches with MCQ, Programming and
+                Subjective questions.
+              </p>
+              <a
+                href="#"
+                class="text-primary-600 font-medium inline-flex items-center"
+              >
+                Learn more
+                <i class="fas fa-arrow-right ml-2 text-sm"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-12 items-start">
+          <!-- FAQ Right Column -->
+          <div class="p-8 md:sticky md:top-24">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">
+              Frequently Asked Questions
+            </h2>
+            <p class="text-gray-600 mb-6">
+              Here are frequently asked questions to clear all your doubts.
+            </p>
+            <div class="text-2xl">Still have doubts?</div>
+            <a
+              href="#"
+              class="hover:text-primary-600 transition-colors flex items-center mt-4 text-primary-500"
+            >
+              <i class="fa-solid fa-phone-volume mr-1"></i>
+              Talk to our representative
+            </a>
+          </div>
+          <!-- FAQ Left Column -->
+          <div class="space-y-6">
+            <!-- FAQ Item -->
+            <div
+              class="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden transition"
+              data-accordion-item
+            >
+              <button
+                class="w-full flex justify-between items-center px-6 py-5 text-left focus:outline-none group"
+                data-accordion-button
+              >
+                <span
+                  class="text-lg font-medium text-gray-800 group-hover:text-primary-600 transition"
+                >
+                  How do I schedule an interview?
+                </span>
+                <i class="fas fa-plus text-primary-500"></i>
+              </button>
+              <div
+                class="px-6 text-gray-600"
+                data-accordion-content
+                style="padding-top: 0px; padding-bottom: 0px"
+              >
+                Go to intervue.io/homepage and select the profile and rounds you
+                want to schedule the interview for. Add candidate and company
+                details and click 'Schedule Interview.'
+              </div>
+            </div>
+
+            <!-- FAQ Item -->
+            <div
+              class="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden transition"
+              data-accordion-item
+            >
+              <button
+                class="w-full flex justify-between items-center px-6 py-5 text-left focus:outline-none group"
+                data-accordion-button
+              >
+                <span
+                  class="text-lg font-medium text-gray-800 group-hover:text-primary-600 transition"
+                >
+                  Will I be charged per interview?
+                </span>
+                <i class="fas fa-plus text-primary-500"></i>
+              </button>
+              <div
+                class="px-6 text-gray-600"
+                data-accordion-content
+                style="padding-top: 0px; padding-bottom: 0px"
+              >
+                For on-demand interviews, you will get paid credits to use per
+                month.
+              </div>
+            </div>
+
+            <!-- FAQ Item -->
+            <div
+              class="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden transition"
+              data-accordion-item
+            >
+              <button
+                class="w-full flex justify-between items-center px-6 py-5 text-left focus:outline-none group"
+                data-accordion-button
+              >
+                <span
+                  class="text-lg font-medium text-gray-800 group-hover:text-primary-600 transition"
+                >
+                  How are interviews evaluated?
+                </span>
+                <i class="fas fa-plus text-primary-500"></i>
+              </button>
+              <div
+                class="px-6 text-gray-600"
+                data-accordion-content
+                style="padding-top: 0px; padding-bottom: 0px"
+              >
+                Interviews are evaluated based on standardized rubrics that
+                assess technical competency, problem-solving approach,
+                communication skills, and code quality. Each evaluation includes
+                detailed feedback and a scorecard that benchmarks the candidate
+                against industry standards for the role.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section
+      class="py-16 bg-gradient-to-r from-primary-500 to-blue-600 text-white"
+    >
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold mb-6">
+          Ready to transform your hiring process?
+        </h2>
+        <p class="text-lg text-blue-100 max-w-2xl mx-auto mb-8">
+          Join thousands of companies who trust Intervue for their technical
+          hiring needs.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <button
+            class="px-8 py-3 bg-white text-primary-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg"
+          >
+            Start Free Trial
+          </button>
+          <button
+            class="px-8 py-3 border border-white rounded-lg font-semibold hover:bg-white/10 transition-colors"
+          >
+            Schedule Demo
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark-900 text-gray-300 py-12">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
+          <div class="lg:col-span-2">
+            <h3 class="text-2xl font-bold text-white mb-4">
+              <img src="./assets/white-logo.svg" class="w-32" alt="" />
+            </h3>
+            <p>On a mission to change how the</p>
+            <p class="mb-6 text-yellow-400 font-bold">
+              world interviews forever
+            </p>
+            <div class="flex space-x-6">
+              <a
+                href="https://twitter.com/IntervueIo"
+                class="hover:text-white transition-colors"
+              >
+                <i class="fa-brands fa-twitter text-2xl"></i>
+              </a>
+              <a
+                href="https://www.facebook.com/intervue.io"
+                class="hover:text-white transition-colors"
+              >
+                <i class="fa-brands fa-facebook text-2xl"></i>
+              </a>
+              <a
+                href="https://instagram.com/intervue.io"
+                class="hover:text-white transition-colors"
+              >
+                <i class="fa-brands fa-instagram text-2xl"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/company/intervue-io"
+                class="hover:text-white transition-colors text-2xl"
+              >
+                <i class="fab fa-linkedin-in text-xl"></i>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-white font-semibold mb-4">Product</h4>
+            <ul class="space-y-3">
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Features</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Pricing</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Resources</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Integrations</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-white font-semibold mb-4">Company</h4>
+            <ul class="space-y-3">
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Careers</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors">Blog</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-white font-semibold mb-4">Legal</h4>
+            <ul class="space-y-3">
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Privacy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors">Terms</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Security</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors">GDPR</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-gray-500 text-sm mb-4 md:mb-0">
+            © 2025 Intervue.io. All rights reserved.
+          </p>
+          <span>
+            Built by
+            <a
+              href="https://kripanshu-singh.github.io/me/"
+              class="gradient-text font-bold"
+              >Kripanshu Singh</a
+            ></span
+          >
+
+          <div class="flex space-x-6">
+            <a
+              href="#"
+              class="text-gray-500 hover:text-white text-sm transition-colors"
+              >Privacy Policy</a
+            >
+            <a
+              href="#"
+              class="text-gray-500 hover:text-white text-sm transition-colors"
+              >Terms of Service</a
+            >
+            <a
+              href="#"
+              class="text-gray-500 hover:text-white text-sm transition-colors"
+              >Cookies</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
