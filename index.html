@@ -53,6 +53,37 @@
   </head>
 
   <body class="bg-white text-gray-800 font-sans antialiased">
+    <!-- FEATURED BANNER WITH SHARK ANIMATION -->
+    <div
+      class="relative overflow-hidden bg-gradient-to-r from-[#101f56] via-[#1e2a6d] to-[#101f56] text-white"
+    >
+      <!-- Animated Shark Background -->
+      <img
+        src="./assets/sharks.gif"
+        alt="Shark Animation"
+        class="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none z-0"
+      />
+
+      <!-- Content Layer -->
+      <a
+        href="https://www.intervue.io/shark-tank"
+        target="_blank"
+        class="relative z-10 flex items-center justify-center gap-3 py-3 px-6 text-sm sm:text-base font-medium transition-all duration-300 hover:brightness hover:scale-[1.01]"
+      >
+        <span class="tracking-wide uppercase text-xs sm:text-sm font-bold">
+          Featured on
+        </span>
+        <img
+          src="./assets/skindia.webp"
+          alt="Shark Tank India"
+          class="w-24 sm:w-32 object-contain"
+        />
+        <i
+          class="fa-regular fa-circle-right text-white text-base sm:text-lg"
+        ></i>
+      </a>
+    </div>
+
     <!-- NAVBAR -->
     <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-sm shadow-sm">
       <div
