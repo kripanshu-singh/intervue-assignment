@@ -1,39 +1,56 @@
-# Intervue.io Technical Interview Resources – Documentation
+# Intervue.io Technical Interview Resources – Assignment Documentation
 
 ### Submitted by: **Kripanshu Singh**
 
-🔗 [Portfolio](https://kripanshu-singh.github.io/me/) | 📧 [Email](mailto:kripanshu.design@gmail.com) | 🧠 Frontend Developer
+[Portfolio](https://kripanshu-singh.github.io/me/) • [Email Me](mailto:kripanshu.design@gmail.com) • Frontend Developer
 
 ---
 
-## Overview
+### Tech Stack & Deployment
 
-As part of my selection process for the **HTML/CSS Internship at Intervue.io**, I was tasked with building a **fully responsive landing page** that reflects the brand’s professional tone and functionality. This webpage features resource listings, testimonial sections, search functionality, interactive FAQ, and mobile responsiveness—all powered by **HTML5, Tailwind CSS, and Vanilla JavaScript**.
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-06B6D4?style=flat&logo=tailwindcss&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![GitHub Pages](https://img.shields.io/badge/Deployed-GitHub%20Pages-24292e?style=flat&logo=github&logoColor=white)
 
 ---
 
-## Table of Contents
+## Live Demo
 
-1. [Project Structure](#project-structure)
-2. [Responsive Design](#responsive-design)
-3. [Key Features](#key-features)
-4. [Component Breakdown](#component-breakdown)
-5. [JavaScript Functionality](#javascript-functionality)
-6. [CSS Implementation](#css-implementation)
-7. [Performance Considerations](#performance-considerations)
-8. [Accessibility](#accessibility)
-9. [Conclusion](#conclusion)
+**[View Deployed Page](https://kripanshu-singh.github.io/intervue-assignment/)**
+
+---
+
+## Summary
+
+This project is a submission for the **HTML/CSS Internship at Intervue.io**, where I was tasked with building a fully responsive landing page showcasing technical interview resources.
+
+The page is built with:
+
+- **HTML5**
+- **Tailwind CSS (via CDN)**
+- **Vanilla JavaScript**
+- **No frameworks or libraries used**
+
+---
+
+## Additional Features I Implemented
+
+1. **"Featured on Shark Tank" banner** with animated shark background using a transparent GIF.
+2. **Working search functionality** to dynamically filter resource cards.
+3. **Fully functional social links in the Testimonial section (Yubi)**
+4. **Working footer links** to Intervue’s social media platforms.
 
 ---
 
 ## Project Structure
 
 ```bash
-📦 intervue-technical-resources/
-├── index.html        # Core HTML structure
-├── style.css         # Custom styles and effects
-├── script.js         # JS logic for interactivity
-└── assets/           # Logos, thumbnails, and other images
+📦 intervue-assignment/
+├── index.html         # Core HTML structure
+├── style.css          # Custom styles and animations
+├── script.js          # Interactive functionality
+└── assets/            # Logos, icons, and GIFs
 ```
 
 Each file has been manually optimized to ensure clarity, maintainability, and performance.
@@ -206,10 +223,10 @@ html {
 
 ## Performance Considerations
 
-- ⚙️ **CDN imports** for Tailwind, Google Fonts, and Font Awesome
-- 🧠 **Lazy-loaded modals** and event listeners
-- 🎯 **Minimal render-blocking resources**
-- 🧽 **Scoped and minimal custom CSS**
+- **CDN imports** for Tailwind, Google Fonts, and Font Awesome
+- **Lazy-loaded modals** and event listeners
+- **Minimal render-blocking resources**
+- **Scoped and minimal custom CSS**
 
 ---
 
@@ -227,10 +244,10 @@ Designed with **a11y best practices**:
 
 This submission reflects my focus on:
 
-- 🎨 **Clean & modern UI**
-- ⚙️ **Efficient, scalable codebase**
-- 📱 **Responsive, mobile-first design**
-- 🧠 **Interactive experience using Vanilla JS**
+- **Clean & modern UI**
+- **Efficient, scalable codebase**
+- **Responsive, mobile-first design**
+- **Interactive experience using Vanilla JS**
 
 ---
 
