@@ -1,18 +1,18 @@
-# 🚀 Intervue.io Technical Interview Resources – Documentation
+# Intervue.io Technical Interview Resources – Documentation
 
-### ✍️ Submitted by: **Kripanshu Singh**
+### Submitted by: **Kripanshu Singh**
 
 🔗 [Portfolio](https://kripanshu-singh.github.io/me/) | 📧 [Email](mailto:kripanshu.design@gmail.com) | 🧠 Frontend Developer
 
 ---
 
-## 🧾 Overview
+## Overview
 
 As part of my selection process for the **HTML/CSS Internship at Intervue.io**, I was tasked with building a **fully responsive landing page** that reflects the brand’s professional tone and functionality. This webpage features resource listings, testimonial sections, search functionality, interactive FAQ, and mobile responsiveness—all powered by **HTML5, Tailwind CSS, and Vanilla JavaScript**.
 
 ---
 
-## 📚 Table of Contents
+## Table of Contents
 
 1. [Project Structure](#project-structure)
 2. [Responsive Design](#responsive-design)

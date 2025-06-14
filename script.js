@@ -71,9 +71,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Initialize the accordion
-
-
   // ====== MOBILE MENU FUNCTIONALITY ======
   class MobileMenu {
     constructor() {
@@ -224,7 +221,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // ====== VIDEO MODAL FUNCTIONALITY ======
-  // (This was already working in your code, but I'm including it for completeness)
   const videoModal = {
     init() {
       const thumbnail = document.getElementById("video-thumbnail");
@@ -363,7 +359,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // ====== UTILITY FUNCTIONS ======
-// Add some utility CSS classes for enhanced functionality
 const addUtilityStyles = () => {
   const styles = `
         <style>
