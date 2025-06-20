@@ -58,11 +58,15 @@
       class="relative overflow-hidden bg-gradient-to-r from-[#101f56] via-[#1e2a6d] to-[#101f56] text-white"
     >
       <!-- Animated Shark Background -->
-      <img
-        src="./assets/sharks.gif"
-        alt="Shark Animation"
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
         class="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none z-0"
-      />
+      >
+        <source src="./assets/sharks.gif" type="video/mp4" />
+      </video>
 
       <!-- Content Layer -->
       <a
